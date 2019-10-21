@@ -10,6 +10,7 @@ public class BinarySearchTree extends Container {
 	@Override
 	public int size() {
                 // TODO: your code here
+                return 0;
 	}
 
 	@Override
@@ -26,5 +27,6 @@ public class BinarySearchTree extends Container {
 	@Override
 	public boolean search(Item item) {
                 // TODO: your code here
+                return false;
 	}
 }
