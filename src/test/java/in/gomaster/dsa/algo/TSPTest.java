@@ -4,11 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class TSPExhaustiveTest {
-
-	@Test
-	void testTsp() {
-		int[][] graph = {
+class TSPTest {
+	private static int[][] s_graph = {
 			{      0, 110189,  50573,  20948, 109480,  34435,  28433,  74836,  91767,  68406 },
 			{ 109006,      0,  79663, 118195,  79397, 143304,  83593,  45792,  37923,  68146 },
 			{  51516,  80265,      0,  70149, 121881,  83636,  44745,  43763,  42416,  67450 },
@@ -20,9 +17,29 @@ class TSPExhaustiveTest {
 			{  92933,  37994,  42414, 111566,  99497, 125053,  78960,  31010,      0,  68113 },
 			{  68718,  68844,  68336,  77907,  55357, 103016,  43305,  38648,  68634,      0 }
 		};
-		
-		int mincost = TSPExhaustive.tsp(graph, 10);
-		assertEquals(454201, mincost);
+	private static int s_mincost = 454201;
+	
+	@Test
+	void testTspExhaustive() {
+		int mincost = TSPExhaustive.tsp(s_graph, 10);
+		assertEquals(s_mincost, mincost);
 	}
-
+	
+	@Test
+	void testTspGreedy() {
+		int mincost = TSPGreedy.tsp(s_graph, 10);
+		assertEquals(s_mincost, mincost);
+	}
+	
+	@Test
+	void testTspBacktrack() {
+		int mincost = TSPBacktrack.tsp(s_graph, 10);
+		assertEquals(s_mincost, mincost);
+	}
+	
+	@Test
+	void testTspBnB() {
+		int mincost = TSPBnB.tsp(s_graph, 10);
+		assertEquals(s_mincost, mincost);
+	}
 }
