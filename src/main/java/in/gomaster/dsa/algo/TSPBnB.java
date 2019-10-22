@@ -6,5 +6,6 @@ public class TSPBnB {
 	//directed complete graph with n vertices in the form a cost matrix.
 	public static int tsp(int[][] graph, int n) {
                 // TODO: your code here
+                return 0;
 	}
 }
