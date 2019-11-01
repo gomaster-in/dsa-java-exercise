@@ -1,9 +1,19 @@
 package in.gomaster.dsa.complexity;
 
-public class SelectionSort {
+import static in.gomaster.dsa.util.Utils.swap;
 
-        /* Sort the given array and return the number of comparisons used */
+public class SelectionSort {
 	public static long sort(int[] arr) {
-                // TODO: your code here
+		long ncomp = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			int min = i;
+			for (int j = i + 1; j < arr.length; j++) {
+				ncomp++;
+				if (arr[j] < arr[min])
+					min = j;
+			}
+			swap(arr, i, min);
+		}
+		return ncomp;
 	}
 }
