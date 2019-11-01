@@ -18,16 +18,19 @@ public class InsertionSort {
 		sortR(arr, arr.length);
 	}
 	
-	public static void sortIterative(int[] arr) {
+	public static long sortIterative(int[] arr) {
 		int n = arr.length;
+		long ncomp = 0;
 		for (int k = 2; k <= n; k++) {
 			int val = arr[k - 1];
 			int i = k - 2;
 			while ((i >= 0) && (arr[i] > val)) {
+				ncomp++;
 				arr[i + 1] = arr[i];
 				i--;
 			}
 			arr[i + 1] = val;
 		}
+		return ncomp;
 	}
 }

@@ -16,12 +16,11 @@ class SelectionSortTest extends SelectionSort {
 	
 	@Test
 	void profileSort() {
-		//int[] sizes = {1000, 10000, 100000, 1000000};
 		int[] sizes = {1000, 10000, 100000};
 		for (int size : sizes) {
-			int[] arr = Utils.genIntArray(size);
+			int[] testArray = Utils.genIntArray(size);
 			long start = System.nanoTime();
-			long ncomp = SelectionSort.sort(arr);
+			long ncomp = SelectionSort.sort(testArray);
 			long end = System.nanoTime();
 			System.out.println(size + ": " + ncomp + ": " + (end - start) / 1000000 + " ms");
 		}
