@@ -23,7 +23,7 @@ class InsertionSortTest {
 			InsertionSort.sortRecursive(testArray);
 			assertTrue(Utils.isIntArraySorted(testArray));
 		} catch (StackOverflowError soe) {
-			System.err.println("testSortRecursiveHuge: Stack overflow!");
+			System.err.println("testSortRecursiveHuge: Stack overflow as expected!");
 		}
 	}
 
