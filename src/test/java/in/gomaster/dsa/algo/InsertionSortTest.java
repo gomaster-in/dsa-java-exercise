@@ -1,4 +1,4 @@
-package in.gomaster.dsa.complexity;
+package in.gomaster.dsa.algo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
