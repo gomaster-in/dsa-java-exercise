@@ -28,6 +28,10 @@ public class Vertex {
 		return m_neighbors;
 	}
 	
+	public boolean equals(Vertex v) {
+		return v.getName().equals(m_name);
+	}
+	
 	public boolean getMark() {
 		return m_mark;
 	}
