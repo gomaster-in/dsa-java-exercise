@@ -16,7 +16,8 @@ class SelectionSortTest extends SelectionSort {
 	
 	@Test
 	void profileSort() {
-		int[] sizes = {1000, 10000, 100000};
+		int[] sizes = {1000, 10000};
+		//int[] sizes = {1000, 10000, 100000, 1000000};
 		for (int size : sizes) {
 			int[] testArray = Utils.genIntArray(size);
 			long start = System.nanoTime();
